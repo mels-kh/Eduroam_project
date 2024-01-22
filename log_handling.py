@@ -1,3 +1,9 @@
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python script.py <filename>")
+    sys.exit(1)
+
 def process_log_file(input_file):
     log_file = open(input_file, 'r')
     # Read lines from the log file
@@ -16,5 +22,5 @@ def process_log_file(input_file):
 
     
 # Example usage:
-input_log_file = "kursain.log"
+input_log_file = sys.argv[1]
 process_log_file(input_log_file)
